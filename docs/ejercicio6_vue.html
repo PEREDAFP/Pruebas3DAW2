@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Le damos el espacio que puede controlar Vue-->
+    <div id="miApp">
+        <h2>Radio de la esfera</h2>
+        <!-- el ref es para permitir el focus en -->
+        <input ref="inputRadio" type="text" v-model.trim="radio" @keyup.enter="calculaVolumen"/>
+        <p> {{ volumen }}</p>
+        <button @click="calculaVolumen">Calcula el volumen</button>
+        <ul>
+            <li v-for="(elemento, index) in listaCalculos" :key="index">
+                <span>Para el radio: {{ elemento.radio }}</span>
+                <span>El volumen: {{ elemento.volumen }}</span>
+            </li>
+        </ul>
+    </div>
+
+     <!-- Cargamos Vue desde el CDN -->
+     <script src="https://unpkg.com/vue@next"></script>
+     <!-- Importamos nuestro script donde esta Vue -->
+     <script src="app_ejer6.js"></script>
+</body>
+</html>
