@@ -9,6 +9,7 @@ const app = Vue.createApp({
     },
     methods:{
         calculaVolumen(){
+            document.title ="lo hemos cambiado";
             this.volumen = (4/3) * Math.PI * Math.pow(Math.abs(this.radio), 3);
             this.listaCalculos = [{radio:this.radio, volumen: this.volumen }, ...this.listaCalculos];
             this.radio = '';

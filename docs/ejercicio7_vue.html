@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Le damos el espacio que puede controlar Vue-->
+    <div id="miApp">
+        <h2>El nuevo título de la página será:</h2>
+        <!-- el ref es para permitir el focus en -->
+        <input ref="inputTitulo" type="text" v-model.trim="titulo" @keyup.enter="cambiaTitulo"/>
+        <button @click="cambiaTitulo">Cambia el Título</button>
+        
+    </div>
+
+     <!-- Cargamos Vue desde el CDN -->
+     <script src="https://unpkg.com/vue@next"></script>
+     <!-- Importamos nuestro script donde esta Vue -->
+     <script src="app_ejer7.js"></script>
+</body>
+</html>
